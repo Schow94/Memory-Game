@@ -1,0 +1,145 @@
+body,
+html {
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  background-color: black;
+}
+
+article {
+  height: 86%;
+  width: 100%;
+  background-color: black;
+}
+
+.row-top {
+  width: 100%;
+  height: 50%;
+  /* background-color: green; */
+}
+.row-bottom {
+  width: 100%;
+  height: 50%;
+  /* background-color: red; */
+}
+
+h1 {
+  font-size: 40px;
+  text-align: center;
+}
+.container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+}
+
+.card {
+  position: absolute;
+  border: 1px solid black;
+  border-radius: 5px;
+  height: 35%;
+  width: 14%;
+  margin-top: 2%;
+}
+
+.face {
+  text-align: center;
+  font-size: 3em;
+  color: white;
+  background-color: teal;
+  z-index: 0;
+}
+
+.back {
+  background-color: blue;
+  z-index: 1;
+}
+
+.card-1 {
+  margin-left: 3%;
+}
+.card-2 {
+  margin-left: 19%;
+}
+.card-3 {
+  margin-left: 35%;
+}
+.card-4 {
+  margin-left: 51%;
+}
+.card-5 {
+  margin-left: 67%;
+}
+.card-6 {
+  margin-left: 83%;
+}
+.card-7 {
+  margin-left: 3%;
+}
+.card-8 {
+  margin-left: 19%;
+}
+.card-9 {
+  margin-left: 35%;
+}
+.card-10 {
+  margin-left: 51%;
+}
+.card-11 {
+  margin-left: 67%;
+}
+.card-12 {
+  margin-left: 83%;
+}
+
+.start-btn {
+  padding: 1em;
+  border-radius: 5px;
+  background-color: green;
+  color: white;
+  font-size: 16px;
+  border: none;
+}
+.start-btn:hover {
+  background-color: teal;
+  transform: scale(1.1, 1.1);
+}
+
+.header {
+  position: relative;
+  top: 0;
+  background-color: #e9ecef;
+  width: 100%;
+  /* height: 14%; */
+}
+
+.back:hover {
+  background-color: teal;
+}
+.title {
+  display: inline-block;
+  position: relative;
+  left: 30%;
+}
+.score-box {
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  margin: 1em;
+}
+
+.card-image {
+  display: inline-block;
+  position: relative;
+  width: 20%;
+  margin-top: 7%;
+  margin-left: 40%;
+}
+
+.wrong {
+  background-color: red;
+  /* transform: translate(5%, 5%); */
+}
