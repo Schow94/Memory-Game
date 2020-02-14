@@ -97,7 +97,7 @@ window.onload = function() {
     //Have to select for score here every time we change score to
     //reflect changes to DOM with each update
     var DOMScore = document.querySelector('.score-box');
-    console.log(DOMScore);
+    // console.log(DOMScore);
 
     if (count === 0) {
       firstClick = e.target;
@@ -111,7 +111,6 @@ window.onload = function() {
       count++;
       currScore++;
       DOMScore.children[1].innerHTML = `Score: ${currScore}`;
-
       if (
         firstClick.nextSibling.innerText !== secondClick.nextSibling.innerText
       ) {
@@ -123,14 +122,12 @@ window.onload = function() {
           secondClick.style.zIndex = 1;
           firstClick.nextSibling.classList.remove('wrong');
           secondClick.nextSibling.classList.remove('wrong');
-        }, 1500);
+        }, 10);
       } else if (
         firstClick.nextSibling.innerText === secondClick.nextSibling.innerText
       ) {
-        firstClick.nextSibling.style.backgroundColor = 'green';
-        firstClick.nextSibling.style.color = 'black';
-        secondClick.nextSibling.style.backgroundColor = 'green';
-        secondClick.nextSibling.style.color = 'black';
+        firstClick.nextSibling.classList.add('correct');
+        secondClick.nextSibling.classList.add('correct');
       }
     } else {
       count = 0;

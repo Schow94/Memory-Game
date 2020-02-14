@@ -8,6 +8,10 @@ html {
   background-color: black;
 }
 
+button:focus {
+  outline: 0 !important;
+}
+
 article {
   height: 86%;
   width: 100%;
@@ -98,14 +102,20 @@ h1 {
 .start-btn {
   padding: 1em;
   border-radius: 5px;
-  background-color: green;
+  background-color: #23a6f7;
   color: white;
   font-size: 16px;
   border: none;
+  box-shadow: -2px 5px 2px #2296f5;
 }
 .start-btn:hover {
-  background-color: teal;
-  transform: scale(1.1, 1.1);
+  background-color: #0289f7;
+  transform: scale(1.05, 1.05);
+}
+
+.start-btn:active {
+  box-shadow: 0px 3px 2px #0289f7;
+  top: 3px;
 }
 
 .header {
@@ -139,7 +149,61 @@ h1 {
   margin-left: 40%;
 }
 
+.correct {
+  background-color: green;
+  animation: success 1s;
+}
+
 .wrong {
-  background-color: red;
-  /* transform: translate(5%, 5%); */
+  background-color: blue;
+  animation: shake 0.3s;
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
+    background-color: red;
+  }
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+  30% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+    background-color: red;
+  }
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
+    background-color: red;
+  }
+}
+
+@keyframes success {
+  0%,
+  100% {
+    background-color: green;
+  }
+  50% {
+    background-color: yellow;
+  }
 }
