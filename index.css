@@ -40,6 +40,10 @@ h1 {
   top: 0;
 }
 
+.click-disabled {
+  cursor: not-allowed;
+}
+
 .card {
   position: absolute;
   border: 1px solid black;
@@ -99,7 +103,7 @@ h1 {
   margin-left: 83%;
 }
 
-.start-btn {
+button {
   padding: 1em;
   border-radius: 5px;
   background-color: #23a6f7;
@@ -108,6 +112,11 @@ h1 {
   border: none;
   box-shadow: -2px 5px 2px #2296f5;
 }
+
+button:hover {
+  cursor: pointer;
+}
+
 .start-btn:hover {
   background-color: #0289f7;
   transform: scale(1.05, 1.05);
@@ -128,11 +137,12 @@ h1 {
 
 .back:hover {
   background-color: teal;
+  cursor: pointer;
 }
 .title {
   display: inline-block;
   position: relative;
-  left: 30%;
+  /* left: 30%; */
 }
 .score-box {
   display: inline-block;
@@ -152,17 +162,18 @@ h1 {
 .correct {
   background-color: green;
   animation: success 1s;
+  cursor: not-allowed;
 }
 
 .wrong {
-  background-color: blue;
-  animation: shake 0.3s;
+  background-color: red;
+  animation: shake 0.3s infinite;
+  cursor: not-allowed;
 }
 
 @keyframes shake {
   0% {
     transform: translate(1px, 1px) rotate(0deg);
-    background-color: red;
   }
   10% {
     transform: translate(-1px, -2px) rotate(-1deg);
@@ -178,7 +189,6 @@ h1 {
   }
   50% {
     transform: translate(-1px, 2px) rotate(-1deg);
-    background-color: red;
   }
   60% {
     transform: translate(-3px, 1px) rotate(0deg);
@@ -194,7 +204,6 @@ h1 {
   }
   100% {
     transform: translate(1px, -2px) rotate(-1deg);
-    background-color: red;
   }
 }
 
