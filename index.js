@@ -6,15 +6,15 @@ window.onload = function() {
   var currScore = 0;
   var counter = 0;
 
-  //Randomly pick number for cards
+  //Array of card #s representing card hands
   var numbers = [
     [1, 2, 3, 4, 5, 6, 6, 5, 4, 3, 2, 1],
     [63, 300, 100, 001, 71, 36, 63, 300, 001, 36, 100, 71],
     [123, 1, 213, 2, 3, 111, 123, 2, 1, 3, 111, 213]
   ];
+  //Randomly pick from pre-made
   var randomNum = Math.floor(Math.random() * (numbers.length + 1));
   var randomArr = numbers[randomNum] || numbers[1];
-  // console.log(randomArr);
 
   //Selectors
   var article = document.querySelector('article');
@@ -23,9 +23,8 @@ window.onload = function() {
   var cardImage = document.querySelector('.card-image');
   var newGameBtn = document.querySelector('.refresh-btn');
   var title = document.querySelector('.title');
-  console.log(title.innerHTML);
-
   var cards = document.getElementsByClassName('back');
+  var instructions = document.querySelector('.instructions');
 
   //Create hand/shuffle cards - Create HTML w/ JS as soon as DOM loads
   function createDeck(e) {
@@ -34,6 +33,7 @@ window.onload = function() {
     var bottomRow = document.createElement('div');
     bottomRow.className = 'row-bottom';
     article.removeChild(cardImage);
+    article.removeChild(instructions);
     article.append(topRow);
     article.append(bottomRow);
 
@@ -44,20 +44,17 @@ window.onload = function() {
 
       cardBack.className = `card card-${i + 1} back`;
       cardFace.className = `card card-${i + 1} face`;
-      // cardBack.className = `card card-${i + 1} back`;
 
-      // cardBack.classList.add('click-disabled');
-      // cardBack.onclick = null;
       var pGraph = document.createElement('p');
       pGraph.innerText = `${randomArr[i]}`;
       pGraph.classList.add(`val-${randomArr[i]}`);
+      pGraph.classList.add('card-text');
       cardFace.append(pGraph);
       topRow.append(cardBack);
       topRow.append(cardFace);
     }
 
     //Create Bottom Row Cards
-    //Create hand/shuffle cards - Create HTML w/ JS as soon as DOM loads
     for (let i = 6; i < randomArr.length; i++) {
       var cardFace = document.createElement('div');
       var cardBack = document.createElement('div');
@@ -69,6 +66,7 @@ window.onload = function() {
       var pGraph = document.createElement('p');
       pGraph.innerHTML = `${randomArr[i]}`;
       pGraph.classList.add(`val-${randomArr[i]}`);
+      pGraph.classList.add('card-text');
       cardFace.append(pGraph);
       bottomRow.append(cardBack);
       bottomRow.append(cardFace);
@@ -76,6 +74,7 @@ window.onload = function() {
   }
 
   //Event Handlers
+
   //Start game - Show user cards for 4sec
   button.addEventListener('click', e => {
     button.classList.remove('start-btn');
@@ -123,20 +122,21 @@ window.onload = function() {
     article.addEventListener('click', backHandler, true);
     article.addEventListener('click', pageHandler, true);
 
-    //Re-enable clicking after 5sec
+    //Allow user to start clicking on cards 4 sec after game starts
     var timer = setTimeout(() => {
       // console.log('Time out');
       article.removeEventListener('click', backHandler, true);
     }, 4000);
 
-    //Shows user cards for sec & then flips cards face down
+    //Shows user cards for 4 sec & then flips cards face down
     for (let i = 0; i < cards.length; i++) {
       cards[i].style.zIndex = -1;
       var timer = setTimeout(() => {
-        // cards[i].nextSibling.classList.remove('click-disabled');
         cards[i].style.zIndex = 1;
       }, 4000);
     }
+
+    //Add Score Box to Header
     var score = document.createElement('p');
     score.innerText = `Score: ${currScore}`;
     var bestScore = document.createElement('p');
@@ -147,6 +147,7 @@ window.onload = function() {
     header.append(div);
     div.className = 'score-box';
 
+    //Count 1, 2, 3, Go & before user can play game
     var interval = setInterval(() => {
       counter++;
       console.log(counter);
@@ -159,11 +160,11 @@ window.onload = function() {
     var timeOut = setTimeout(() => {
       clearInterval(interval);
     }, 4000);
-  });
 
-  var timeOut2 = setTimeout(() => {
-    title.innerText = `Give up Yet?`;
-  }, 7000);
+    var timeOut2 = setTimeout(() => {
+      title.innerText = `Give up Yet?`;
+    }, 10000);
+  });
 
   //Flip a card
   article.addEventListener('click', function(e) {
@@ -185,9 +186,10 @@ window.onload = function() {
       //Revealing face of card #2
       secondClick.style.zIndex = -1;
       count++;
+
       setTimeout(() => {
         count = 1;
-      }, 2000);
+      }, 1000);
       currScore++;
       DOMScore.children[1].innerHTML = `Score: ${currScore}`;
 
@@ -203,9 +205,6 @@ window.onload = function() {
       // article.addEventListener('click', cardHandler, false);
       article.classList.add('click-disabled');
 
-      console.log(firstClick.nextSibling.children[0].className);
-      console.log(secondClick.nextSibling.children[0].className);
-
       if (
         firstClick.nextSibling.children[0].className !==
         secondClick.nextSibling.children[0].className
@@ -220,7 +219,7 @@ window.onload = function() {
           firstClick.nextSibling.classList.remove('wrong');
           secondClick.nextSibling.classList.remove('wrong');
           article.classList.remove('click-disabled');
-        }, 2000);
+        }, 1000);
         //After 1 sec, you can click on a new card again
       }
       //IF 2 cards are same
