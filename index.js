@@ -5,16 +5,51 @@ window.onload = function() {
   var firstClick, secondClick;
   var currScore = 0;
   var counter = 0;
+  var matches = 0;
 
   //Array of card #s representing card hands
+  // //12 Cards
+  // var numbers = [
+  //   [1, 2, 3, 4, 5, 6, 6, 5, 4, 3, 2, 1],
+  //   [63, 300, 100, 001, 71, 36, 63, 300, 001, 36, 100, 71],
+  //   [123, 1, 213, 2, 3, 111, 123, 2, 1, 3, 111, 213]
+  // ];
+
+  //24 Cards
   var numbers = [
-    [1, 2, 3, 4, 5, 6, 6, 5, 4, 3, 2, 1],
-    [63, 300, 100, 001, 71, 36, 63, 300, 001, 36, 100, 71],
-    [123, 1, 213, 2, 3, 111, 123, 2, 1, 3, 111, 213]
+    [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      6,
+      5,
+      4,
+      3,
+      2,
+      1,
+      63,
+      300,
+      100,
+      001,
+      71,
+      36,
+      63,
+      300,
+      001,
+      36,
+      100,
+      71
+    ]
+
+    // [123, 1, 213, 2, 3, 111, 123, 2, 1, 3, 111, 213]
   ];
+
   //Randomly pick from pre-made
   var randomNum = Math.floor(Math.random() * (numbers.length + 1));
-  var randomArr = numbers[randomNum] || numbers[1];
+  var randomArr = numbers[randomNum] || numbers[0];
 
   //Selectors
   var article = document.querySelector('article');
@@ -28,16 +63,64 @@ window.onload = function() {
 
   //Create hand/shuffle cards - Create HTML w/ JS as soon as DOM loads
   function createDeck(e) {
-    var topRow = document.createElement('div');
-    topRow.className = 'row-top';
-    var bottomRow = document.createElement('div');
-    bottomRow.className = 'row-bottom';
+    // var topRow = document.createElement('div');
+    // topRow.className = 'row-top';
+    // var bottomRow = document.createElement('div');
+    // bottomRow.className = 'row-bottom';
+    var rowOne = document.createElement('div');
+    rowOne.className = 'row-1';
+    var rowTwo = document.createElement('div');
+    rowTwo.className = 'row-2';
+    var rowThree = document.createElement('div');
+    rowThree.className = 'row-3';
+    var rowFour = document.createElement('div');
+    rowFour.className = 'row-4';
+
     article.removeChild(cardImage);
     article.removeChild(instructions);
-    article.append(topRow);
-    article.append(bottomRow);
+    article.append(rowOne);
+    article.append(rowTwo);
+    article.append(rowThree);
+    article.append(rowFour);
 
-    //Create Top Row Cards
+    // //Playing with 12 cards
+    // //Create Top Row Cards
+    // for (let i = 0; i < 6; i++) {
+    //   var cardFace = document.createElement('div');
+    //   var cardBack = document.createElement('div');
+
+    //   cardBack.className = `card card-${i + 1} back`;
+    //   cardFace.className = `card card-${i + 1} face`;
+
+    //   var pGraph = document.createElement('p');
+    //   pGraph.innerText = `${randomArr[i]}`;
+    //   pGraph.classList.add(`val-${randomArr[i]}`);
+    //   pGraph.classList.add('card-text');
+    //   cardFace.append(pGraph);
+    //   topRow.append(cardBack);
+    //   topRow.append(cardFace);
+    // }
+
+    // //Create Bottom Row Cards
+    // for (let i = 6; i < randomArr.length; i++) {
+    //   var cardFace = document.createElement('div');
+    //   var cardBack = document.createElement('div');
+
+    //   cardBack.className = `card card-${i + 1} back`;
+    //   cardFace.className = `card card-${i + 1} face`;
+    //   // cardFace.onclick = null;
+    //   // cardBack.classList.add('click-disabled');
+    //   var pGraph = document.createElement('p');
+    //   pGraph.innerHTML = `${randomArr[i]}`;
+    //   pGraph.classList.add(`val-${randomArr[i]}`);
+    //   pGraph.classList.add('card-text');
+    //   cardFace.append(pGraph);
+    //   bottomRow.append(cardBack);
+    //   bottomRow.append(cardFace);
+    // }
+
+    //Playing with 24 cards 4 x 6
+    //Row 1 Cards
     for (let i = 0; i < 6; i++) {
       var cardFace = document.createElement('div');
       var cardBack = document.createElement('div');
@@ -46,16 +129,17 @@ window.onload = function() {
       cardFace.className = `card card-${i + 1} face`;
 
       var pGraph = document.createElement('p');
+      // console.log(randomArr[i]);
       pGraph.innerText = `${randomArr[i]}`;
       pGraph.classList.add(`val-${randomArr[i]}`);
       pGraph.classList.add('card-text');
       cardFace.append(pGraph);
-      topRow.append(cardBack);
-      topRow.append(cardFace);
+      rowOne.append(cardBack);
+      rowOne.append(cardFace);
     }
 
-    //Create Bottom Row Cards
-    for (let i = 6; i < randomArr.length; i++) {
+    //Row 2 Cards
+    for (let i = 6; i < 12; i++) {
       var cardFace = document.createElement('div');
       var cardBack = document.createElement('div');
 
@@ -68,8 +152,42 @@ window.onload = function() {
       pGraph.classList.add(`val-${randomArr[i]}`);
       pGraph.classList.add('card-text');
       cardFace.append(pGraph);
-      bottomRow.append(cardBack);
-      bottomRow.append(cardFace);
+      rowTwo.append(cardBack);
+      rowTwo.append(cardFace);
+    }
+
+    //Row 3 Cards
+    for (let i = 12; i < 18; i++) {
+      var cardFace = document.createElement('div');
+      var cardBack = document.createElement('div');
+
+      cardBack.className = `card card-${i + 1} back`;
+      cardFace.className = `card card-${i + 1} face`;
+
+      var pGraph = document.createElement('p');
+      pGraph.innerText = `${randomArr[i]}`;
+      pGraph.classList.add(`val-${randomArr[i]}`);
+      pGraph.classList.add('card-text');
+      cardFace.append(pGraph);
+      rowThree.append(cardBack);
+      rowThree.append(cardFace);
+    }
+
+    // Row 4 Cards
+    for (let i = 18; i < 24; i++) {
+      var cardFace = document.createElement('div');
+      var cardBack = document.createElement('div');
+
+      cardBack.className = `card card-${i + 1} back`;
+      cardFace.className = `card card-${i + 1} face`;
+
+      var pGraph = document.createElement('p');
+      pGraph.innerText = `${randomArr[i]}`;
+      pGraph.classList.add(`val-${randomArr[i]}`);
+      pGraph.classList.add('card-text');
+      cardFace.append(pGraph);
+      rowFour.append(cardBack);
+      rowFour.append(cardFace);
     }
   }
 
@@ -227,9 +345,13 @@ window.onload = function() {
         firstClick.nextSibling.children[0].className ===
         secondClick.nextSibling.children[0].className
       ) {
-        console.log('Cards MATCH!');
+        matches++;
+        console.log('matches: ', matches);
         firstClick.nextSibling.classList.add('correct');
-
+        if (matches === 12) {
+          title.innerText = 'Congratulations, we have a winner!';
+          title.classList.add('winner');
+        }
         // firstClick.nextSibling.classList.add('click-disabled');
         secondClick.nextSibling.classList.add('correct');
         // secondClick.nextSibling.classList.add('click-disabled');

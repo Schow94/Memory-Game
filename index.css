@@ -18,13 +18,32 @@ article {
   background-color: black;
 }
 
-.row-top {
+/* 12 cards */
+/* .row-top {
   width: 100%;
   height: 50%;
 }
 .row-bottom {
   width: 100%;
   height: 50%;
+} */
+
+/* 24 cards */
+.row-1 {
+  width: 100%;
+  height: 25%;
+}
+.row-2 {
+  width: 100%;
+  height: 25%;
+}
+.row-3 {
+  width: 100%;
+  height: 25%;
+}
+.row-4 {
+  width: 100%;
+  height: 25%;
 }
 
 h1 {
@@ -46,21 +65,22 @@ h1 {
   position: absolute;
   border: 1px solid black;
   border-radius: 5px;
-  height: 35%;
+  height: 17%;
   width: 14%;
-  margin-top: 2%;
+  margin-top: 1%;
+  margin-bottom: 1%;
 }
 
 .face {
   text-align: center;
-  font-size: 2em;
+  font-size: 1em;
   color: white;
   background-color: teal;
   z-index: 0;
 }
 
 .card-text {
-  margin-top: 50%;
+  margin-top: 20%;
 }
 
 .back {
@@ -103,6 +123,42 @@ h1 {
   margin-left: 67%;
 }
 .card-12 {
+  margin-left: 83%;
+}
+.card-13 {
+  margin-left: 3%;
+}
+.card-14 {
+  margin-left: 19%;
+}
+.card-15 {
+  margin-left: 35%;
+}
+.card-16 {
+  margin-left: 51%;
+}
+.card-17 {
+  margin-left: 67%;
+}
+.card-18 {
+  margin-left: 83%;
+}
+.card-19 {
+  margin-left: 3%;
+}
+.card-20 {
+  margin-left: 19%;
+}
+.card-21 {
+  margin-left: 35%;
+}
+.card-22 {
+  margin-left: 51%;
+}
+.card-23 {
+  margin-left: 67%;
+}
+.card-24 {
   margin-left: 83%;
 }
 
@@ -266,4 +322,19 @@ button:hover {
   margin-left: 30%;
   letter-spacing: 0.2em;
   line-height: 3em;
+}
+
+.winner {
+  animation: congratulations 0.3s infinite;
+}
+
+@keyframes congratulations {
+  0%,
+  100% {
+    color: blue;
+  }
+  50% {
+    color: red;
+    transform: scale(1.2, 2);
+  }
 }
