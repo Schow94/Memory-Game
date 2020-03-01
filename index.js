@@ -16,6 +16,7 @@ window.onload = function() {
   // ];
 
   //24 Cards
+  //Use this arr as a backup if creating random deck fails
   var numbers = [
     [
       1,
@@ -42,14 +43,76 @@ window.onload = function() {
       36,
       100,
       71
+    ],
+    [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      12,
+      11,
+      10,
+      9,
+      8,
+      7,
+      6,
+      5,
+      4,
+      3,
+      2,
+      1
     ]
-
     // [123, 1, 213, 2, 3, 111, 123, 2, 1, 3, 111, 213]
   ];
 
+  //Randomly create a deck & shuffle
+  //Create Arr of random #s
+  const createArr = () => {
+    let num = 12;
+    let arr = [];
+    let randomNum;
+    while (num > 0) {
+      randNum = Math.floor(Math.random() * 100);
+      arr.push(randNum);
+      arr.push(randNum);
+      num--;
+    }
+    return arr;
+  };
+
+  //Shuffle Arr
+  function shuffle(arr) {
+    //Variable Declarations
+    var currIdx = arr.length;
+    var temp;
+    var randomIdx;
+    //Loop arr.length to 1
+    while (0 !== currIdx) {
+      randomIdx = Math.floor(Math.random() * currIdx);
+      currIdx--;
+      temp = arr[currIdx];
+      arr[currIdx] = arr[randomIdx];
+      arr[randomIdx] = temp;
+    }
+    return arr;
+  }
+
+  //Create Deck
+  const createAndShuffle = () => {
+    return shuffle(createArr());
+  };
+
   //Randomly pick from pre-made
   var randomNum = Math.floor(Math.random() * (numbers.length + 1));
-  var randomArr = numbers[randomNum] || numbers[0];
+  var randomArr = createAndShuffle() || numbers[0];
 
   //Selectors
   var article = document.querySelector('article');

@@ -213,11 +213,11 @@ button {
 
 button:hover {
   cursor: pointer;
+  transform: scale(1.05, 1.05);
 }
 
 .start-btn:hover {
   background-color: #0289f7;
-  transform: scale(1.05, 1.05);
 }
 
 .start-btn:active {
