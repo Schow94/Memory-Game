@@ -18,6 +18,10 @@ article {
   background-color: black;
 }
 
+.refresh-btn {
+  box-shadow: -2px 5px 2px orange;
+}
+
 /* 12 cards */
 /* .row-top {
   width: 100%;
@@ -88,7 +92,7 @@ h1 {
   z-index: 1;
 }
 
-/* 12 card game */
+/* 24 card game */
 .card-1 {
   margin-left: 3%;
 }
@@ -162,7 +166,7 @@ h1 {
   margin-left: 83%;
 }
 
-/* 24 card game */
+/* 12 card game */
 /* .card-1 {
   margin-left: 3%;
 }
@@ -207,7 +211,6 @@ button {
   color: white;
   font-size: 16px;
   border: none;
-  box-shadow: -2px 5px 2px #2296f5;
   margin: 1em;
 }
 
@@ -215,7 +218,9 @@ button:hover {
   cursor: pointer;
   transform: scale(1.05, 1.05);
 }
-
+.start-btn {
+  box-shadow: -2px 5px 2px #2296f5;
+}
 .start-btn:hover {
   background-color: #0289f7;
 }
@@ -315,13 +320,52 @@ button:hover {
   }
 }
 
+/* Mobile */
+@media (max-width: 480px) {
+  .instructions {
+    width: 90%;
+    margin-left: 5%;
+    letter-spacing: 0.2em;
+    line-height: 2em;
+  }
+}
+
+/* In btwn phone & tablet */
+@media (min-width: 481px) {
+  .instructions {
+    width: 70%;
+    margin-left: 15%;
+    letter-spacing: 0.2em;
+    line-height: 2em;
+    font-size: 1.5em;
+  }
+}
+
+/* iPad */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .instructions {
+    width: 80%;
+    margin-left: 10%;
+    letter-spacing: 0.2em;
+    font-size: 1.5em;
+    line-height: 3em;
+  }
+}
+
+/* Computer */
+@media (min-width: 1024px) {
+  .instructions {
+    width: 80%;
+    margin-left: 10%;
+    letter-spacing: 0.2em;
+    line-height: 3em;
+    font-size: 2em;
+  }
+}
+
 .instructions {
   color: white;
   text-align: center;
-  width: 40%;
-  margin-left: 30%;
-  letter-spacing: 0.2em;
-  line-height: 3em;
 }
 
 .winner {
@@ -335,6 +379,6 @@ button:hover {
   }
   50% {
     color: red;
-    transform: scale(1.2, 2);
+    transform: scale(1.1, 1.2);
   }
 }

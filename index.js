@@ -192,7 +192,6 @@ window.onload = function() {
       cardFace.className = `card card-${i + 1} face`;
 
       var pGraph = document.createElement('p');
-      // console.log(randomArr[i]);
       pGraph.innerText = `${randomArr[i]}`;
       pGraph.classList.add(`val-${randomArr[i]}`);
       pGraph.classList.add('card-text');
@@ -208,8 +207,6 @@ window.onload = function() {
 
       cardBack.className = `card card-${i + 1} back`;
       cardFace.className = `card card-${i + 1} face`;
-      // cardFace.onclick = null;
-      // cardBack.classList.add('click-disabled');
       var pGraph = document.createElement('p');
       pGraph.innerHTML = `${randomArr[i]}`;
       pGraph.classList.add(`val-${randomArr[i]}`);
