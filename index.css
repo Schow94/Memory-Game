@@ -12,12 +12,6 @@ button:focus {
   outline: 0 !important;
 }
 
-article {
-  height: 62%;
-  width: 100%;
-  background-color: black;
-}
-
 .refresh-btn {
   box-shadow: -2px 5px 2px orange;
   display: block;
@@ -64,16 +58,6 @@ h1 {
 
 .click-disabled {
   cursor: not-allowed;
-}
-
-.card {
-  position: absolute;
-  border: 1px solid black;
-  border-radius: 5px;
-  height: 15%;
-  width: 14%;
-  margin-top: 3%;
-  margin-bottom: 1%;
 }
 
 .face {
@@ -245,7 +229,6 @@ button:hover {
 }
 
 .title {
-  font-size: 2em;
   display: inline-block;
   margin-top: 0;
   margin-left: 0;
@@ -328,7 +311,7 @@ button:hover {
   }
 }
 
-/* Mobile */
+/* iPhone 6S */
 @media (max-width: 480px) {
   .instructions {
     width: 90%;
@@ -345,7 +328,7 @@ button:hover {
     position: relative;
     top: 0;
     background-color: #e9ecef;
-    height: 35%;
+    height: 28%;
   }
   .card-image {
     display: inline-block;
@@ -353,6 +336,23 @@ button:hover {
     width: 20%;
     margin-top: 4%;
     margin-left: 40%;
+  }
+  .title {
+    font-size: 1.2em;
+  }
+  article {
+    height: 55%;
+    width: 100%;
+    background-color: black;
+  }
+  .card {
+    position: absolute;
+    border: 1px solid black;
+    border-radius: 5px;
+    height: 12%;
+    width: 14%;
+    margin-top: 3%;
+    margin-bottom: 1%;
   }
 }
 
