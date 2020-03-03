@@ -322,7 +322,7 @@ window.onload = function() {
     var div = document.createElement('div');
     div.append(bestScore);
     div.append(score);
-    header.append(div);
+    title.after(div);
     div.className = 'score-box';
 
     //Count 1, 2, 3, Go & before user can play game
@@ -341,6 +341,7 @@ window.onload = function() {
 
     var timeOut2 = setTimeout(() => {
       title.innerText = `Give up Yet?`;
+      // title.style.fontSize = '2em';
     }, 10000);
   });
 
