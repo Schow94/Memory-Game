@@ -12,11 +12,6 @@ button:focus {
   outline: 0 !important;
 }
 
-.refresh-btn {
-  box-shadow: -2px 5px 2px orange;
-  display: block;
-}
-
 /* 12 cards */
 /* .row-top {
   width: 100%;
@@ -68,9 +63,6 @@ h1 {
   z-index: 0;
 }
 
-.card-text {
-  margin-top: 20%;
-}
 
 .back {
   background-color: blue;
@@ -189,15 +181,6 @@ h1 {
   margin-left: 83%;
 } */
 
-button {
-  padding: 1em;
-  border-radius: 5px;
-  background-color: #23a6f7;
-  color: white;
-  font-size: 16px;
-  border: none;
-  margin: 1em;
-}
 
 button:hover {
   cursor: pointer;
@@ -215,35 +198,27 @@ button:hover {
   top: 3px;
 }
 
-.header {
+/* .header {
   position: absolute;
   top: 0;
   background-color: #e9ecef;
   width: 100%;
   text-align: center;
-}
+} */
 
 .back:hover {
   background-color: teal;
   cursor: pointer;
 }
 
-.title {
+/* .title {
   display: inline-block;
-  margin-top: 0;
+  /* margin-top: 0;
   margin-left: 0;
-  padding-left: 0px;
-  position: relative;
+  padding-left: 0px; */
   /* background-color: red; */
-  width: 50%;
-}
-
-.score-box {
-  display: inline-block;
-  position: relative;
-  width: 47%;
-  /* background-color: blue; */
-}
+  /* width: 50%; */
+} */
 
 /* .card-image {
   display: inline-block;
@@ -312,7 +287,7 @@ button:hover {
 }
 
 /* iPhone 6S */
-@media (max-width: 480px) {
+/* @media (max-width: 480px) {
   .instructions {
     width: 90%;
     margin-left: 5%;
@@ -354,6 +329,256 @@ button:hover {
     margin-top: 3%;
     margin-bottom: 1%;
   }
+} */
+
+/* @media (max-width: 480px) {
+  .instructions {
+    width: 90%;
+    margin-left: 5%;
+    letter-spacing: 0.2em;
+    line-height: 2em;
+    margin-top: 7%;
+  }
+
+  .start-btn {
+    font-size: 1.2em;
+  }
+  .header {
+    position: relative;
+    top: 0;
+    background-color: #e9ecef;
+    height: 28%;
+  }
+  .card-image {
+    display: inline-block;
+    position: relative;
+    width: 20%;
+    margin-top: 4%;
+    margin-left: 40%;
+  }
+  .title {
+    font-size: 1.2em;
+  }
+  article {
+    height: 55%;
+    width: 100%;
+    background-color: black;
+  }
+  .card {
+    position: absolute;
+    border: 1px solid black;
+    border-radius: 5px;
+    height: 12%;
+    width: 14%;
+    margin-top: 3%;
+    margin-bottom: 1%;
+  }
+} */
+
+/* iPhone 6S Portrait & Landscape  */
+/* @media only screen and (min-device-width: 375px) and (max-device-width: 736px) {
+  .instructions {
+    width: 90%;
+    margin-left: 5%;
+    letter-spacing: 0.2em;
+    line-height: 2em;
+    margin-top: 7%;
+  }
+
+  .start-btn {
+    font-size: 1.2em;
+  }
+  .header {
+    position: relative;
+    top: 0;
+    background-color: #e9ecef;
+    min-height: 30%;
+  }
+  .title {
+    font-size: 1.2em;
+  }
+  article {
+    height: 55%;
+    width: 100%;
+    background-color: black;
+  }
+  .card {
+    position: absolute;
+    border: 1px solid black;
+    border-radius: 5px;
+    height: 12%;
+    width: 14%;
+    margin-top: 3%;
+    margin-bottom: 1%;
+  }
+  .card-image {
+    display: inline-block;
+    position: relative;
+    width: 10%;
+    margin-top: 4%;
+    margin-left: 40%;
+  }
+} */
+
+/* iPhone 6S Portrait*/
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+  .instructions {
+    width: 90%;
+    margin-left: 5%;
+    letter-spacing: 0.2em;
+    line-height: 1.8em;
+    margin-top: 7%;
+  }
+
+  .start-btn {
+    font-size: 1em;
+  }
+  .header {
+    display:inline-block;
+    width: 100%;
+    position: relative;
+    top: 0;
+    background-color: #e9ecef;
+    min-height: 20%;
+  }
+  .title {
+    font-size: 1.2em;
+  }
+  article {
+    height: 55%;
+    width: 100%;
+    background-color: black;
+  }
+  .card {
+    position: absolute;
+    border: 1px solid black;
+    border-radius: 5px;
+    height: 12%;
+    width: 14%;
+    margin-top: 3%;
+    margin-bottom: 1%;
+  }
+  .card-image {
+    display: inline-block;
+    position: relative;
+    width: 10%;
+    margin-top: 4%;
+    margin-left: 45%;
+  }
+  .refresh-btn {
+    box-shadow: -2px 5px 2px orange;
+    font-size: 1em;
+    display: block;
+  }
+  .score-box {
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    /* width: 47%; */
+    /* background-color: blue; */
+  }
+  
+  button {
+  padding: 1em;
+  border-radius: 5px;
+  background-color: #23a6f7;
+  color: white;
+  border: none;
+  margin-left: 35%;
+  /* position: absolute; */
+  bottom: 5%;
+  
+}
+}
+
+/* iPhone 6S Landscape */
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+  .instructions {
+    width: 90%;
+    margin-left: 5%;
+    letter-spacing: 0.2em;
+    line-height: 1.6em;
+    margin-top: 1%;
+    font-size: 1em;
+  }
+
+  .start-btn {
+    font-size: 0.8em;
+    /* display: block; */
+  }
+  .header {
+    position: relative;
+    top: 0;
+    background-color: #e9ecef;
+    min-height: 25%;
+  }
+  
+  .title {
+    font-size: 1.2em;
+    top: 0;
+    position: absolute;
+    /* left: 0; */
+    width: 50%;
+    margin-left: 25%;
+    text-align:center;
+  }
+
+  article {
+    height: 55%;
+    width: 100%;
+    background-color: black;
+  }
+  .card {
+    position: absolute;
+    border: 1px solid black;
+    border-radius: 5px;
+    height: 12%;
+    width: 14%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+  }
+  .card-image {
+    display: inline-block;
+    position: relative;
+    width: 5%;
+    margin-top: 4%;
+    margin-left: 47.5%;
+  }
+
+  .refresh-btn {
+    box-shadow: -2px 5px 2px orange;
+    /* display: block; */
+    font-size: 0.8em;
+    /* margin: 0; */
+  }
+  .score-box {
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    /* width: 47%; */
+    /* background-color: blue; */
+  }
+  button {
+  padding: 1em;
+  border-radius: 5px;
+  background-color: #23a6f7;
+  color: white;
+  font-size: 16px;
+  border: none;
+  margin-left: 42%;
+  position: absolute;
+  bottom: 13%;
+  
+}
+
+.card-text {
+  margin-top: 15%;
+}
+
+
 }
 
 /* In btwn phone & tablet */
