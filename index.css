@@ -8,21 +8,141 @@ html {
   background-color: black;
 }
 
+.container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+}
+button {
+  font-size: 1em;
+  background-color: yellow;
+}
 button:focus {
   outline: 0 !important;
 }
 
-/* 12 cards */
-/* .row-top {
-  width: 100%;
-  height: 50%;
+h1 {
+  font-size: 40px;
+  text-align: center;
 }
-.row-bottom {
-  width: 100%;
-  height: 50%;
-} */
 
-/* 24 cards */
+.click-disabled {
+  cursor: not-allowed;
+}
+
+.face {
+  text-align: center;
+  font-size: 1em;
+  color: white;
+  background-color: teal;
+  z-index: 0;
+}
+
+.back {
+  background-color: blue;
+  z-index: 1;
+}
+
+button:hover {
+  cursor: pointer;
+  transform: scale(1.05, 1.05);
+}
+.start-btn {
+  box-shadow: -2px 5px 2px #2296f5;
+}
+.start-btn:hover {
+  background-color: #0289f7;
+}
+
+.start-btn:active {
+  box-shadow: 0px 3px 2px #0289f7;
+  top: 3px;
+}
+
+.back:hover {
+  background-color: teal;
+  cursor: pointer;
+}
+
+.correct {
+  background-color: green;
+  animation: success 1s;
+  cursor: not-allowed;
+}
+
+.wrong {
+  background-color: red;
+  animation: shake 0.3s infinite;
+  cursor: not-allowed;
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+  30% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
+  }
+}
+
+@keyframes success {
+  0%,
+  100% {
+    background-color: green;
+  }
+  50% {
+    background-color: yellow;
+  }
+}
+
+.instructions {
+  color: white;
+  text-align: center;
+}
+
+.winner {
+  animation: congratulations 0.3s infinite;
+}
+
+@keyframes congratulations {
+  0%,
+  100% {
+    color: blue;
+  }
+  50% {
+    color: red;
+    transform: scale(1.1, 1.2);
+  }
+}
+
 .row-1 {
   width: 100%;
   height: 25%;
@@ -38,35 +158,6 @@ button:focus {
 .row-4 {
   width: 100%;
   height: 25%;
-}
-
-h1 {
-  font-size: 40px;
-  text-align: center;
-}
-.container {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-}
-
-.click-disabled {
-  cursor: not-allowed;
-}
-
-.face {
-  text-align: center;
-  font-size: 1em;
-  color: white;
-  background-color: teal;
-  z-index: 0;
-}
-
-
-.back {
-  background-color: blue;
-  z-index: 1;
 }
 
 /* 24 card game */
@@ -143,286 +234,9 @@ h1 {
   margin-left: 83%;
 }
 
-/* 12 card game */
-/* .card-1 {
-  margin-left: 3%;
-}
-.card-2 {
-  margin-left: 19%;
-}
-.card-3 {
-  margin-left: 35%;
-}
-.card-4 {
-  margin-left: 51%;
-}
-.card-5 {
-  margin-left: 67%;
-}
-.card-6 {
-  margin-left: 83%;
-}
-.card-7 {
-  margin-left: 3%;
-}
-.card-8 {
-  margin-left: 19%;
-}
-.card-9 {
-  margin-left: 35%;
-}
-.card-10 {
-  margin-left: 51%;
-}
-.card-11 {
-  margin-left: 67%;
-}
-.card-12 {
-  margin-left: 83%;
-} */
-
-
-button:hover {
-  cursor: pointer;
-  transform: scale(1.05, 1.05);
-}
-.start-btn {
-  box-shadow: -2px 5px 2px #2296f5;
-}
-.start-btn:hover {
-  background-color: #0289f7;
-}
-
-.start-btn:active {
-  box-shadow: 0px 3px 2px #0289f7;
-  top: 3px;
-}
-
-/* .header {
-  position: absolute;
-  top: 0;
-  background-color: #e9ecef;
-  width: 100%;
-  text-align: center;
-} */
-
-.back:hover {
-  background-color: teal;
-  cursor: pointer;
-}
-
-/* .title {
-  display: inline-block;
-  /* margin-top: 0;
-  margin-left: 0;
-  padding-left: 0px; */
-  /* background-color: red; */
-  /* width: 50%; */
-} */
-
-/* .card-image {
-  display: inline-block;
-  position: relative;
-  width: 10%;
-  margin-top: 2%;
-  margin-left: 45%;
-} */
-
-.correct {
-  background-color: green;
-  animation: success 1s;
-  cursor: not-allowed;
-}
-
-.wrong {
-  background-color: red;
-  animation: shake 0.3s infinite;
-  cursor: not-allowed;
-}
-
-@keyframes shake {
-  0% {
-    transform: translate(1px, 1px) rotate(0deg);
-  }
-  10% {
-    transform: translate(-1px, -2px) rotate(-1deg);
-  }
-  20% {
-    transform: translate(-3px, 0px) rotate(1deg);
-  }
-  30% {
-    transform: translate(3px, 2px) rotate(0deg);
-  }
-  40% {
-    transform: translate(1px, -1px) rotate(1deg);
-  }
-  50% {
-    transform: translate(-1px, 2px) rotate(-1deg);
-  }
-  60% {
-    transform: translate(-3px, 1px) rotate(0deg);
-  }
-  70% {
-    transform: translate(3px, 1px) rotate(-1deg);
-  }
-  80% {
-    transform: translate(-1px, -1px) rotate(1deg);
-  }
-  90% {
-    transform: translate(1px, 2px) rotate(0deg);
-  }
-  100% {
-    transform: translate(1px, -2px) rotate(-1deg);
-  }
-}
-
-@keyframes success {
-  0%,
-  100% {
-    background-color: green;
-  }
-  50% {
-    background-color: yellow;
-  }
-}
-
-/* iPhone 6S */
-/* @media (max-width: 480px) {
-  .instructions {
-    width: 90%;
-    margin-left: 5%;
-    letter-spacing: 0.2em;
-    line-height: 2em;
-    margin-top: 7%;
-  }
-
-  .start-btn {
-    font-size: 1.2em;
-  }
-  .header {
-    position: relative;
-    top: 0;
-    background-color: #e9ecef;
-    height: 28%;
-  }
-  .card-image {
-    display: inline-block;
-    position: relative;
-    width: 20%;
-    margin-top: 4%;
-    margin-left: 40%;
-  }
-  .title {
-    font-size: 1.2em;
-  }
-  article {
-    height: 55%;
-    width: 100%;
-    background-color: black;
-  }
-  .card {
-    position: absolute;
-    border: 1px solid black;
-    border-radius: 5px;
-    height: 12%;
-    width: 14%;
-    margin-top: 3%;
-    margin-bottom: 1%;
-  }
-} */
-
-/* @media (max-width: 480px) {
-  .instructions {
-    width: 90%;
-    margin-left: 5%;
-    letter-spacing: 0.2em;
-    line-height: 2em;
-    margin-top: 7%;
-  }
-
-  .start-btn {
-    font-size: 1.2em;
-  }
-  .header {
-    position: relative;
-    top: 0;
-    background-color: #e9ecef;
-    height: 28%;
-  }
-  .card-image {
-    display: inline-block;
-    position: relative;
-    width: 20%;
-    margin-top: 4%;
-    margin-left: 40%;
-  }
-  .title {
-    font-size: 1.2em;
-  }
-  article {
-    height: 55%;
-    width: 100%;
-    background-color: black;
-  }
-  .card {
-    position: absolute;
-    border: 1px solid black;
-    border-radius: 5px;
-    height: 12%;
-    width: 14%;
-    margin-top: 3%;
-    margin-bottom: 1%;
-  }
-} */
-
-/* iPhone 6S Portrait & Landscape  */
-/* @media only screen and (min-device-width: 375px) and (max-device-width: 736px) {
-  .instructions {
-    width: 90%;
-    margin-left: 5%;
-    letter-spacing: 0.2em;
-    line-height: 2em;
-    margin-top: 7%;
-  }
-
-  .start-btn {
-    font-size: 1.2em;
-  }
-  .header {
-    position: relative;
-    top: 0;
-    background-color: #e9ecef;
-    min-height: 30%;
-  }
-  .title {
-    font-size: 1.2em;
-  }
-  article {
-    height: 55%;
-    width: 100%;
-    background-color: black;
-  }
-  .card {
-    position: absolute;
-    border: 1px solid black;
-    border-radius: 5px;
-    height: 12%;
-    width: 14%;
-    margin-top: 3%;
-    margin-bottom: 1%;
-  }
-  .card-image {
-    display: inline-block;
-    position: relative;
-    width: 10%;
-    margin-top: 4%;
-    margin-left: 40%;
-  }
-} */
-
-/* iPhone 6S Portrait*/
-
-@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+/* ******* Media Queries ****** */
+/* iPhone X Portrait*/
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
   .instructions {
     width: 90%;
     margin-left: 5%;
@@ -435,12 +249,12 @@ button:hover {
     font-size: 1em;
   }
   .header {
-    display:inline-block;
+    display: inline-block;
     width: 100%;
     position: relative;
     top: 0;
     background-color: #e9ecef;
-    min-height: 20%;
+    min-height: 25%;
   }
   .title {
     font-size: 1.2em;
@@ -448,7 +262,6 @@ button:hover {
   article {
     height: 55%;
     width: 100%;
-    background-color: black;
   }
   .card {
     position: absolute;
@@ -479,22 +292,21 @@ button:hover {
     /* width: 47%; */
     /* background-color: blue; */
   }
-  
+
   button {
-  padding: 1em;
-  border-radius: 5px;
-  background-color: #23a6f7;
-  color: white;
-  border: none;
-  margin-left: 35%;
-  /* position: absolute; */
-  bottom: 5%;
-  
-}
+    padding: 1em;
+    border-radius: 5px;
+    background-color: #23a6f7;
+    color: white;
+    border: none;
+    margin-left: 35%;
+    /* position: absolute; */
+    bottom: 5%;
+  }
 }
 
-/* iPhone 6S Landscape */
-@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+/* iPhone X Landscape */
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
   .instructions {
     width: 90%;
     margin-left: 5%;
@@ -503,10 +315,8 @@ button:hover {
     margin-top: 1%;
     font-size: 1em;
   }
-
   .start-btn {
     font-size: 0.8em;
-    /* display: block; */
   }
   .header {
     position: relative;
@@ -514,21 +324,17 @@ button:hover {
     background-color: #e9ecef;
     min-height: 25%;
   }
-  
   .title {
     font-size: 1.2em;
     top: 0;
     position: absolute;
-    /* left: 0; */
     width: 50%;
     margin-left: 25%;
-    text-align:center;
+    text-align: center;
   }
-
   article {
     height: 55%;
     width: 100%;
-    background-color: black;
   }
   .card {
     position: absolute;
@@ -549,9 +355,7 @@ button:hover {
 
   .refresh-btn {
     box-shadow: -2px 5px 2px orange;
-    /* display: block; */
     font-size: 0.8em;
-    /* margin: 0; */
   }
   .score-box {
     display: inline-block;
@@ -562,110 +366,312 @@ button:hover {
     /* background-color: blue; */
   }
   button {
-  padding: 1em;
-  border-radius: 5px;
-  background-color: #23a6f7;
-  color: white;
-  font-size: 16px;
-  border: none;
-  margin-left: 42%;
-  position: absolute;
-  bottom: 13%;
-  
+    padding: 1em;
+    border-radius: 5px;
+    background-color: #23a6f7;
+    color: white;
+    font-size: 16px;
+    border: none;
+    margin-left: 42%;
+    position: absolute;
+    bottom: 13%;
+  }
+  .card-text {
+    margin-top: 15%;
+  }
 }
 
-.card-text {
-  margin-top: 15%;
-}
-
-
-}
-
-/* In btwn phone & tablet */
-/* @media (min-width: 481px) {
+/* iPad Portrait */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2), {
   .instructions {
-    width: 70%;
-    margin-left: 15%;
+    width: 90%;
+    margin-left: 5%;
     letter-spacing: 0.2em;
-    line-height: 2em;
+    line-height: 1.8em;
+    margin-top: 7%;
     font-size: 1.5em;
   }
-  .title {
-    font-size: 1em;
-  }
-} */
-
-/* iPad */
-/* @media (min-width: 768px) and (max-width: 1024px) {
-  .instructions {
-    width: 80%;
-    margin-left: 10%;
-    letter-spacing: 0.2em;
-    font-size: 1.8em;
-    line-height: 3em;
-    margin-top: 20%;
-  }
-  .title {
+  .start-btn {
     font-size: 2em;
-    margin-top: 0.5em;
-    margin-bottom: 0px;
+  }
+  .header {
+    display: inline-block;
+    width: 100%;
+    position: relative;
+    top: 0;
+    background-color: #e9ecef;
+    min-height: 25%;
+  }
+  .title {
+    font-size: 2.5em;
+  }
+  article {
+    height: 55%;
+    width: 100%;
+  }
+  .card {
+    position: absolute;
+    border: 1px solid black;
+    border-radius: 5px;
+    height: 12%;
+    width: 14%;
+    margin-top: 3%;
+    margin-bottom: 1%;
+  }
+  .card-image {
+    display: inline-block;
+    position: relative;
+    width: 10%;
+    margin-top: 4%;
+    margin-left: 45%;
+  }
+  .refresh-btn {
+    box-shadow: -2px 5px 2px orange;
+    font-size: 2em;
+    display: block;
+  }
+  .score-box {
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 1.5em;
+  }
+
+  button {
+    padding: 1em;
+    border-radius: 5px;
+    background-color: #23a6f7;
+    color: white;
+    border: none;
+    margin-left: 36%;
+    bottom: 5%;
+  }
+  .card-text {
+    margin-top: 40%;
+    font-size: 2em;
+  }
+}
+
+/* iPad Landscape */
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2), {
+  .instructions {
+    width: 90%;
+    margin-left: 5%;
+    letter-spacing: 0.3em;
+    line-height: 1.8em;
+    margin-top: 1%;
+    font-size: 1.5em;
   }
   .start-btn {
-    font-size: 0.8em;
+    font-size: 1.5em;
   }
   .header {
     position: relative;
     top: 0;
     background-color: #e9ecef;
-    width: 100%;
-    text-align: center;
-    height: 10%;
+    min-height: 25%;
   }
-} */
+  .title {
+    font-size: 2em;
+    top: 0;
+    position: absolute;
+    width: 50%;
+    margin-left: 25%;
+    text-align: center;
+  }
+  article {
+    height: 55%;
+    width: 100%;
+  }
+  .card {
+    position: absolute;
+    border: 1px solid black;
+    border-radius: 5px;
+    height: 12%;
+    width: 14%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+  }
+  .card-image {
+    display: inline-block;
+    position: relative;
+    width: 5%;
+    margin-top: 4%;
+    margin-left: 47.5%;
+  }
 
-/* Computer */
-/* @media (min-width: 1024px) {
+  .refresh-btn {
+    box-shadow: -2px 5px 2px orange;
+    font-size: 1.5em;
+  }
+  .score-box {
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 1.5em;
+  }
+  button {
+    padding: 1em;
+    border-radius: 5px;
+    background-color: #23a6f7;
+    color: white;
+    border: none;
+    margin-left: 42%;
+    position: absolute;
+    bottom: 13%;
+  }
+  .card-text {
+    margin-top: 15%;
+    font-size: 2em;
+  }
+}
+
+/* iPad Pro Portrait */
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2), {
   .instructions {
-    width: 80%;
-    margin-left: 10%;
+    width: 90%;
+    margin-left: 5%;
     letter-spacing: 0.2em;
     line-height: 2em;
+    margin-top: 7%;
     font-size: 2em;
   }
+
+  .start-btn {
+    font-size: 2.5em;
+  }
+  .header {
+    display: inline-block;
+    width: 100%;
+    position: relative;
+    top: 0;
+    background-color: #e9ecef;
+    min-height: 25%;
+  }
   .title {
-    font-size: 3.2em;
-    margin-top: 0.5em;
-    margin-bottom: 0px;
+    font-size: 2.5em;
+  }
+  article {
+    height: 55%;
+    width: 100%;
+  }
+  .card {
+    position: absolute;
+    border: 1px solid black;
+    border-radius: 5px;
+    height: 12%;
+    width: 14%;
+    margin-top: 3%;
+    margin-bottom: 1%;
+  }
+  .card-image {
+    display: inline-block;
+    position: relative;
+    width: 10%;
+    margin-top: 4%;
+    margin-left: 45%;
+  }
+  .refresh-btn {
+    box-shadow: -2px 5px 2px orange;
+    font-size: 2.5em;
+    display: block;
+  }
+  .score-box {
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 2em;
+  }
+
+  button {
+    padding: 1em;
+    border-radius: 5px;
+    background-color: #23a6f7;
+    color: white;
+    border: none;
+    margin-left: 37%;
+    bottom: 5%;
+  }
+  .card-text {
+    margin-top: 40%;
+    font-size: 2em;
+  }
+}
+/* iPad Pro Landscape */
+@media only screen and (min-device-width: 1366px) and (max-device-width: 1366px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+  .instructions {
+    width: 90%;
+    margin-left: 5%;
+    letter-spacing: 0.3em;
+    line-height: 2em;
+    margin-top: 1%;
+    font-size: 2em;
   }
   .start-btn {
-    font-size: 1em;
+    font-size: 2em;
   }
   .header {
     position: relative;
     top: 0;
     background-color: #e9ecef;
-    width: 100%;
+    min-height: 25%;
+  }
+  .title {
+    font-size: 3em;
+    top: 0;
+    position: absolute;
+    /* left: 0; */
+    width: 50%;
+    margin-left: 25%;
     text-align: center;
-    height: 17%;
   }
-} */
-
-.instructions {
-  color: white;
-  text-align: center;
-}
-
-.winner {
-  animation: congratulations 0.3s infinite;
-}
-
-@keyframes congratulations {
-  0%,
-  100% {
-    color: blue;
+  article {
+    height: 55%;
+    width: 100%;
   }
-  50% {
-    color: red;
-    transform: scale(1.1, 1.2);
+  .card {
+    position: absolute;
+    border: 1px solid black;
+    border-radius: 5px;
+    height: 12%;
+    width: 14%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+  }
+  .card-image {
+    display: inline-block;
+    position: relative;
+    width: 5%;
+    margin-top: 4%;
+    margin-left: 47.5%;
+  }
+
+  .refresh-btn {
+    box-shadow: -2px 5px 2px orange;
+    font-size: 2em;
+  }
+  .score-box {
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 2em;
+  }
+  button {
+    padding: 1em;
+    border-radius: 5px;
+    background-color: #23a6f7;
+    color: white;
+    border: none;
+    margin-left: 42%;
+    position: absolute;
+    bottom: 13%;
+  }
+  .card-text {
+    margin-top: 15%;
+    font-size: 2em;
   }
 }
