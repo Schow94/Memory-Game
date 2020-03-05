@@ -16,7 +16,6 @@ html {
 }
 button {
   font-size: 1em;
-  background-color: yellow;
 }
 button:focus {
   outline: 0 !important;
@@ -143,21 +142,10 @@ button:hover {
   }
 }
 
-.row-1 {
+.row {
   width: 100%;
-  height: 25%;
-}
-.row-2 {
-  width: 100%;
-  height: 25%;
-}
-.row-3 {
-  width: 100%;
-  height: 25%;
-}
-.row-4 {
-  width: 100%;
-  height: 25%;
+  height: 35%;
+  /* border: 1px solid white; */
 }
 
 /* 24 card game */
@@ -561,9 +549,9 @@ button:hover {
     position: absolute;
     border: 1px solid black;
     border-radius: 5px;
-    height: 12%;
+    height: 20%;
     width: 14%;
-    margin-top: 3%;
+    margin-top: 1%;
     margin-bottom: 1%;
   }
   .card-image {
@@ -673,5 +661,372 @@ button:hover {
   .card-text {
     margin-top: 15%;
     font-size: 2em;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  .instructions {
+    width: 90%;
+    margin-left: 5%;
+    letter-spacing: 0.4em;
+    line-height: 2em;
+    margin-top: 7%;
+    font-size: 0.8em;
+  }
+
+  .start-btn {
+    font-size: 1em;
+  }
+  .header {
+    display: inline-block;
+    width: 100%;
+    position: relative;
+    top: 0;
+    background-color: #e9ecef;
+    min-height: 25%;
+    text-align: center;
+  }
+  .title {
+    font-size: 1em;
+    margin-top: 20%;
+  }
+  article {
+    height: 55%;
+    width: 100%;
+  }
+  .card {
+    position: absolute;
+    border: 1px solid black;
+    border-radius: 5px;
+    height: 15%;
+    width: 14%;
+    margin-top: 3%;
+    margin-bottom: 1%;
+  }
+  .card-image {
+    display: inline-block;
+    position: relative;
+    width: 10%;
+    margin-top: 4%;
+    margin-left: 45%;
+  }
+  .refresh-btn {
+    box-shadow: -2px 5px 2px orange;
+    font-size: 1em;
+  }
+  .score-box {
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 1em;
+  }
+
+  button {
+    padding: 0.8em;
+    border-radius: 5px;
+    background-color: #23a6f7;
+    color: white;
+    border: none;
+  }
+  .card-text {
+    margin-top: 80%;
+    font-size: 1em;
+  }
+}
+
+@media only screen and (min-width: 300px) and (max-width: 650px) {
+  .instructions {
+    width: 90%;
+    margin-left: 5%;
+    letter-spacing: 0.2em;
+    line-height: 1.8em;
+    margin-top: 7%;
+  }
+
+  .start-btn {
+    font-size: 1em;
+  }
+  .header {
+    display: inline-block;
+    width: 100%;
+    position: relative;
+    top: 0;
+    background-color: #e9ecef;
+    min-height: 25%;
+    text-align: center;
+  }
+  .title {
+    font-size: 1.5em;
+    margin-top: 5%;
+  }
+  article {
+    height: 55%;
+    width: 100%;
+  }
+  .card {
+    position: absolute;
+    border: 1px solid black;
+    border-radius: 5px;
+    height: 15%;
+    width: 14%;
+    margin-top: 3%;
+    margin-bottom: 1%;
+  }
+  .row {
+    height: 33%;
+  }
+  .card-image {
+    display: inline-block;
+    position: relative;
+    width: 10%;
+    margin-top: 4%;
+    margin-left: 45%;
+  }
+  .refresh-btn {
+    box-shadow: -2px 5px 2px orange;
+    font-size: 1em;
+  }
+  .score-box {
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 1em;
+  }
+
+  button {
+    padding: 1em;
+    border-radius: 5px;
+    background-color: #23a6f7;
+    color: white;
+    border: none;
+  }
+  .card-text {
+    margin-top: 35%;
+    font-size: 1.5em;
+  }
+}
+
+@media only screen and (min-width: 650px) and (max-width: 1000px) {
+  .instructions {
+    width: 75%;
+    margin-left: 12.5%;
+    letter-spacing: 0.4em;
+    line-height: 2em;
+    margin-top: 5%;
+  }
+
+  .start-btn {
+    font-size: 1em;
+  }
+  .header {
+    display: inline-block;
+    width: 100%;
+    position: relative;
+    top: 0;
+    background-color: #e9ecef;
+    min-height: 25%;
+    text-align: center;
+  }
+  .title {
+    font-size: 1.5em;
+    margin-top: 5%;
+  }
+  article {
+    height: 55%;
+    width: 100%;
+  }
+  .card {
+    position: absolute;
+    border: 1px solid black;
+    border-radius: 5px;
+    height: 15%;
+    width: 14%;
+    margin-top: 3%;
+    margin-bottom: 1%;
+  }
+  .row {
+    height: 33%;
+  }
+  .card-image {
+    display: inline-block;
+    position: relative;
+    width: 10%;
+    margin-top: 4%;
+    margin-left: 45%;
+  }
+  .refresh-btn {
+    box-shadow: -2px 5px 2px orange;
+    font-size: 1em;
+  }
+  .score-box {
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 1em;
+  }
+
+  button {
+    padding: 1em;
+    border-radius: 5px;
+    background-color: #23a6f7;
+    color: white;
+    border: none;
+  }
+  .card-text {
+    margin-top: 30%;
+    font-size: 1.5em;
+  }
+}
+
+@media only screen and (min-width: 1000px) and (max-width: 1300px) {
+  .instructions {
+    width: 60%;
+    margin-left: 20%;
+    letter-spacing: 0.3em;
+    line-height: 2.5em;
+    margin-top: 1%;
+    font-size: 1.1em;
+  }
+
+  .start-btn {
+    font-size: 1em;
+  }
+  .header {
+    display: inline-block;
+    width: 100%;
+    position: relative;
+    top: 0;
+    background-color: #e9ecef;
+    min-height: 15%;
+    text-align: center;
+  }
+  .title {
+    font-size: 2em;
+    margin-top: 2%;
+  }
+  article {
+    /* position: absolute; */
+    height: 55%;
+    width: 100%;
+  }
+  .card {
+    position: absolute;
+    border: 1px solid black;
+    border-radius: 5px;
+    height: 16%;
+    width: 14%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+  }
+  .card-image {
+    display: inline-block;
+    position: relative;
+    width: 8%;
+    margin-top: 4%;
+    margin-left: 46%;
+  }
+  .refresh-btn {
+    box-shadow: -2px 5px 2px orange;
+    font-size: 1em;
+  }
+  .score-box {
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 1em;
+  }
+
+  button {
+    padding: 1em;
+    border-radius: 5px;
+    background-color: #23a6f7;
+    color: white;
+    border: none;
+    margin-bottom: 2%;
+  }
+  .card-text {
+    margin-top: 25%;
+    font-size: 1.5em;
+  }
+}
+
+@media only screen and (min-width: 1300px) {
+  .instructions {
+    width: 70%;
+    margin-left: 15%;
+    letter-spacing: 0.3em;
+    line-height: 2.5em;
+    margin-top: 1%;
+    font-size: 1.2em;
+  }
+
+  .start-btn {
+    font-size: 1em;
+  }
+  .header {
+    display: inline-block;
+    width: 100%;
+    position: relative;
+    top: 0;
+    background-color: #e9ecef;
+    min-height: 15%;
+    text-align: center;
+  }
+  .title {
+    font-size: 3em;
+    margin-top: 2%;
+  }
+  article {
+    /* position: absolute; */
+    height: 55%;
+    width: 100%;
+  }
+  .row {
+    /* border: 1px solid white; */
+    height: 31.5%;
+  }
+  .card {
+    position: absolute;
+    border: 1px solid black;
+    border-radius: 5px;
+    height: 15%;
+    width: 14%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+  }
+  .card-image {
+    display: inline-block;
+    position: relative;
+    width: 5%;
+    margin-top: 2%;
+    margin-left: 47.5%;
+  }
+  .refresh-btn {
+    box-shadow: -2px 5px 2px orange;
+    font-size: 1em;
+  }
+  .score-box {
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 1em;
+  }
+
+  button {
+    padding: 1em;
+    border-radius: 5px;
+    background-color: #23a6f7;
+    color: white;
+    border: none;
+    margin-bottom: 2%;
+  }
+  .card-text {
+    margin-top: 20%;
+    font-size: 1.5em;
   }
 }

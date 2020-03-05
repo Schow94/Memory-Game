@@ -131,13 +131,13 @@ window.onload = function() {
     // var bottomRow = document.createElement('div');
     // bottomRow.className = 'row-bottom';
     var rowOne = document.createElement('div');
-    rowOne.className = 'row-1';
+    rowOne.className = 'row row-1';
     var rowTwo = document.createElement('div');
-    rowTwo.className = 'row-2';
+    rowTwo.className = 'row row-2';
     var rowThree = document.createElement('div');
-    rowThree.className = 'row-3';
+    rowThree.className = 'row row-3';
     var rowFour = document.createElement('div');
-    rowFour.className = 'row-4';
+    rowFour.className = 'row row-4';
 
     article.removeChild(cardImage);
     article.removeChild(instructions);
